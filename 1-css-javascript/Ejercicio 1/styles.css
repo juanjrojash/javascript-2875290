@@ -1,0 +1,101 @@
+body {
+    background-color: black;
+}
+
+.container {
+    height: 400px;
+    width: 100%;
+    max-width: 700px;
+    margin: 200px auto;
+    background-color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.sol {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 247, 0);
+    border-radius: 50%;
+    bottom: 90px;
+    right: 170px;
+    z-index: 1;
+    position: absolute;
+    /*animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-name: mover;
+    animation-delay: .2s;
+    */
+}
+
+.guia {
+    z-index: 3;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+@keyframes mover {
+    0% { }
+    50% { 
+        bottom: 450px;
+        background-color: orange;
+    }
+}
+
+.nube1 {
+    position: absolute;
+    bottom: 200px;
+    width: 25%;
+    animation: moverNube1 18s linear infinite;
+    bottom: 150px;
+}
+
+.nube2 {
+    position: absolute;
+    bottom: 200px;
+    width: 25%;
+    animation: moverNube2 30s linear infinite;
+    bottom: 270px;
+}
+
+.nube3 {
+    position: absolute;
+    bottom: 200px;
+    width: 25%;
+    animation: moverNube1 12s linear infinite;
+    bottom: 250px;
+}
+
+@keyframes moverNube1 {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes moverNube2 {
+    0% {
+        left: -30%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes moverNube3 {
+    0% {
+        right: -30%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.montaña img {
+    width: 100%;
+    padding-top: 155px;
+    position: relative;
+    z-index: 2;
+}
