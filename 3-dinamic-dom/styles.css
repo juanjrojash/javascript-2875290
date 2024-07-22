@@ -1,15 +1,15 @@
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* m0 */
+    padding: 0; /* p0 */
+    box-sizing: border-box; /* bx */
 }
-.boxColores {
+
+.boxColores{
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    padding: 70px 0;
+    padding: 40px 0;
     gap: 15px;
-    background-color: bisque;
 }
 .boxColores select{
     padding: 10px 20px;
@@ -18,15 +18,16 @@
 .boxColores button{
     padding: 10px 20px;
     border-radius: 15px;
-    background-color: rgb(204,141,63);
+    background-color:bisque;
     border: none;
     cursor: pointer;
 }
 main{
     display: flex;
+    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     width: 85%;
     min-height: 500px;
     max-width: 1400px;
@@ -34,7 +35,9 @@ main{
     border: 3px solid black;
     border-radius: 15px;
 }
+
 .pelotica{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,4 +46,21 @@ main{
     border-radius: 50%;
     background-color: aquamarine;
     border: 2px solid black;
+}
+
+.equis{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 199, 199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    top: -10px;
+    cursor: pointer;
 }
