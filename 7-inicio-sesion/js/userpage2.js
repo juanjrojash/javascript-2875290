@@ -1,0 +1,26 @@
+const container = document.querySelector ('.container')
+const logoutButton = document.querySelector('.logout-button');
+
+peliculas.forEach(element => {
+let card = document.createElement('div')
+
+card.innerHTML = `
+    <div class="card">
+        <img src="${element.image}"
+alt="Imagen de la tarjeta" class="card-image">
+        <div class="card-content">
+            <h2 class="card-title">${element.nombre}</h2>
+            <p class="card-description">
+                Año: ${element.year} <br>
+                Dirección: '${element.direccion}' <br>
+                Guionistas: '${element.guionistas}'<br>
+                Género: '${element.genero}'</p>
+        </div>
+    </div>
+    `
+    container.appendChild(card)
+    
+    logoutButton.addEventListener('click', () => {
+        window.location.href = "../index.html";
+    });
+} )
