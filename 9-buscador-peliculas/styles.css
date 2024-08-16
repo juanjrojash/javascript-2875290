@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: linear-gradient(45deg, black, green);
+}
+
+.header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    margin: 0;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+.header form {
+    margin: 0 20px;
+}
+
+#buscador {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: green;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+#textobusqueda {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#listaStatus {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#listaStatus option {
+    padding: 10px;
+}
+
+button[type="submit"] {
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button[type="submit"]:hover {
+    background-color: #232423;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    gap: 20px;
+}
+
+.card {
+    width: 340px;
+    height: 600px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.card-image {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+.card-description {
+    text-align: center;
+    font-size: 0.9em;
+    color: #ffffff;
+    margin: 10px 0;
+    flex: 1;
+    line-height: 20px;
+}
