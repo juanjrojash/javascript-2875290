@@ -18,10 +18,13 @@
             <img src="sources/images/" alt="Logo" class="logo-img">
         </div>
         <div class="search-container">
-            <input type="text" placeholder="Escribe aquí...">
-            <a href="#" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <form id="search-container" class="search-container">
+            <input type="text" id="textobusqueda" placeholder="Escribe aquí...">
+            <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
         </div>
         <nav class="header-buttons">
+            <span id="saludoUsuario"></span>
             <a href="#" class="Inicio">Inicio</a>
             <div class="Modulos">
                 <a href="#" class="Modulos-lista">Módulos</a>
@@ -34,12 +37,16 @@
                     <a href="./vistas/modulo6.html">Módulo 6</a>
                 </div>
             </div>
-            <a href="#" class="Nosotros">Nosotros</a>
-            <a href="./vistas/ingreso.html" class="Ingresar">Ingresar
+            <a  href="#" class="Nosotros">Nosotros</a>
+            <a id="btnIngresar" href="#" class="Ingresar">Ingresar
                 <i class="fas fa-sign-in-alt"></i>
             </a>
+            <a id="btnCerrarSesion" href="#" style="display: none;">Cerrar Sesión</a>
+            
+            </div>
         </nav>
     </header>
+
     <section class="hero-section">
         <div class="hero-content">
             <div class="text-redes">
@@ -57,21 +64,7 @@
     </section>
     
     <section class="gallery-section">
-        <div class="gallery">
-            <button class="nav-button prev"><i class="fa-solid fa-angle-left"></i></button>
-            <div class="gallery-container">
-                <div class="gallery-images" id="gallery1">
-                    <a href="./vistas/modulo1.html"><img src="sources/images/Mini-modulo1.png" alt="Imagen 1"></a>
-                    <a href="./vistas/modulo2.html"><img src="sources/images/Mini-modulo2.png" alt="Imagen 2"></a>
-                    <a href="./vistas/modulo3.html"><img src="sources/images/Mini-modulo3.png" alt="Imagen 3"></a>
-                </div>
-                <div class="gallery-images" id="gallery2">
-                    <a href="./vistas/modulo4.html"><img src="sources/images/Mini-modulo4.png" alt="Imagen 4"></a>
-                    <a href="./vistas/modulo5.html"><img src="sources/images/Mini-modulo5.png" alt="Imagen 5"></a>
-                    <a href="./vistas/modulo6.html"><img src="sources/images/Mini-modulo6.png" alt="Imagen 6"></a>
-                </div>
-            </div>
-            <button class="nav-button next"><i class="fa-solid fa-angle-right"></i></button>
+        <div class="container">
         </div>
     </section>
     
@@ -104,6 +97,7 @@
         </div>
         <div class="derechos-text">Derechos de autor © Fortis. Todos los derechos reservados.</div>
     </footer>
+    <script src="./js/bd.js"></script>
     <script src="./js/app.js"></script>
 </body>
 </html>

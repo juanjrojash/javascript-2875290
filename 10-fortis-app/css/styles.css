@@ -43,9 +43,8 @@ header {
 
 .search-container button {
     border: none;
-    color: white;
+    color: #1d938a;
     padding: 5px 10px;
-    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -56,8 +55,6 @@ header {
     width: 30px;
     height: 30px;
     background-color: white;
-    color: #1d938a;
-    border-radius: 50%;
     text-align: center;
     text-decoration: none;
     font-size: 18px;
@@ -214,84 +211,42 @@ header {
     background-color: #d0d0d0;
 }
 
-.gallery-section {
-    padding: 20px;
-    text-align: center;
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* No permite que las tarjetas salten a una nueva línea */
+    overflow-x: auto; /* Agrega un desplazamiento horizontal si hay muchas tarjetas */
+    gap: 20px; /* Espacio entre las tarjetas */
+    padding-top: 40px;
 }
 
-.gallery {
-    position: relative;
-    width:100%;
+.card {
+    flex: 0 0 auto; /* Evita que las tarjetas cambien de tamaño y permite el desplazamiento horizontal */
+    width: 300px; /* Ajusta el ancho de las tarjetas según tu diseño */
+    border: 1px solid #ccc;
+    border-radius: 8px;
     overflow: hidden;
-    margin: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
-.gallery-container {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.gallery-images {
-    display: flex;
-    flex-wrap: nowrap;
+.card-header img {
     width: 100%;
-    padding-left: 16%;
+    height: auto;
 }
 
-.gallery-images img {
-    width: 400px; /* Ancho de cada imagen */
-    height: 400px; /* Alto de cada imagen */
-    padding-left: 30px; /* Espacio entre las imágenes */
-}
-
-#gallery2 {
-    display: none; /* Oculta el segundo conjunto al cargar la página */
-}
-
-.nav-button {
-    border: none;
-    color: white;
-    background-color: #1d938a;
+.card-body {
     padding: 10px;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 1.5em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
-.nav-button.prev {
-    left: 0;
+.card-body h1 {
+    font-size: 1.2em;
+    margin: 0 0 10px;
 }
 
-.nav-button.next {
-    right: 0;
+.card-body p {
+    font-size: 1em;
+    margin: 0 0 10px;
 }
-
-
-.nav-button {
-    border: none;
-    color: white;
-    background-color: #1d938a;
-    padding: 10px;
-    border-radius: 40px;
-    cursor: pointer;
-    font-size: 1.5em;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.nav-button.prev {
-    left: 10px;
-}
-
-.nav-button.next {
-    right: 10px;
-}
-
 
 .full-image-section {
     position: relative;
