@@ -250,6 +250,32 @@ header {
     transform: scale(1.05);
 }
 
+.objective-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px;
+}
+
+.course-objective {
+    background-color: #2cafa2;
+    color: white;
+    padding: 22px;
+    font-size: 1.5rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.objective-text {
+    background-color: white;
+    color: #2cafa2;
+    padding: 15px;
+    border: 2px solid #2cafa2;
+    margin-left: 10px;
+    font-size: 1rem;
+    flex-grow: 1; 
+}
+
 #ingresar-button {
     display: flex;
     align-items: center;

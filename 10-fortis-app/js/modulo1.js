@@ -1,81 +1,66 @@
-const container = document.querySelector('.container');
-const inicio = document.querySelector('#inicio');
+document.addEventListener('DOMContentLoaded', () => {
+    const temas = [
+        {
+            titulo: "NUTRICIÓN Y ALIMENTACIÓN ADECUADA",
+            contenidos: [
+                "REQUERIMIENTOS NUTRICIONALES",
+                "IMPORTANCIA DE LA HIDRATACIÓN",
+                "SUPLEMENTACIÓN DEPORTIVA"
+            ]
+        },
+        {
+            titulo: "ENTRENAMIENTO FÍSICO",
+            contenidos: [
+                "PRINCIPIOS DEL ENTRENAMIENTO DEPORTIVO",
+                "PERIODIZACIÓN DEL ENTRENAMIENTO",
+                "PREVENCIÓN DE LESIONES"
+            ]
+        },
+        {
+            titulo: "DESCANSO Y RECUPERACIÓN",
+            contenidos: [
+                "IMPORTANCIA DEL SUEÑO",
+                "ESTRATEGIAS DE RECUPERACIÓN",
+                "MANEJO DEL ESTRÉS Y FATIGA"
+            ]
+        },
+        {
+            titulo: "SALUD MENTAL Y BIENESTAR EMOCIONAL",
+            contenidos: [
+                "MANEJO DEL ESTRES DEL DEPORTE",
+                "APOYO PSICOLOGICO",
+                "BIENESTAR EMOCIONAL Y RENDIMIENTO DEPORTIVO"
+            ]
+        },
+        {
+            titulo: "SALUD FÍSICA Y PREVENCIÓN DE LESIONES",
+            contenidos: [
+                "EVALUACIÓN DE SALUD FISICA",
+                "EJERCICIOS DE FORTALECIMIENTO Y FLEXIBILIDAD",
+                "PREVENCIÓN DE LESIONES DEPORTIVAS"
+            ]
+        }
+    ];
 
-modulos.forEach(element => {
+    const textOverlay = document.querySelector('#text-overlay');
 
-    if(element.id == 4){
-        let ingreso = document.createElement('div')
-        let principal = document.createElement('div')
-        let card = document.createElement('div')
+    function createContentHTML() {
+        let html = '';
+        let index = 1; 
 
-principal.innerHTML = `
-<img src"${element.img}
-<h2>${element.nombre}
-`
+        temas.forEach((tema) => {
+            html += `<div class="text-block texto-movible-${index}">`; 
+            html += `<h3>${tema.titulo}</h3>`; 
+            tema.contenidos.forEach((contenido) => {
+                html += `<p>${contenido}</p>`; 
+            });
+            html += `<button class="enter-button"><i class="fas fa-sign-in-alt"></i> Ingresar</button>`; 
+            html += `</div>`;
+            index++;
+        });
 
-card.innerHTML = `
-<div class= "card">
-    <div class = "card-header">
-        <img src"${element.img}
-    </div>
-    <div class = "card-body">
-        <h1 class= "nombre">${element.nombre1}
-        <p class= "text">${element.descripcion1}
-    </div>
-</div>
+        return html;
+    }
 
-<div class= "card">
-    <div class = "card-header">
-        <img src"${element.img}
-    </div>
-    <div class = "card-body">
-        <h1 class= "nombre"${element.nombre2}
-        <p class= "text">${element.descripcion2}
-    </div>
-</div>
-
-<div class= "card">
-    <div class = "card-header">
-        <img src"${element.img}
-    </div>
-    <div class = "card-body">
-        <h1 class= "nombre"${element.nombre3}
-        <p class= "text">${element.descripcion3}
-    </div>
-</div>
-
-<div class= "card">
-    <div class = "card-header">
-        <img src"${element.img}
-    </div>
-    <div class = "card-body">
-        <h1 class= "nombre"${element.nombre4}
-        <p class= "text">${element.descripcion4}
-    </div>
-</div>
-
-<div class= "card">
-    <div class = "card-header">
-        <img src"${element.img}
-    </div>
-    <div class = "card-body">
-        <h1 class= "nombre"${element.nombre5}
-        <p class= "text">${element.descripcion5}
-    </div>
-</div>
-
-<div class= "card">
-    <div class = "card-header">
-        <img src"${element.img}
-    </div>
-    <div class = "card-body">
-        <h1 class= "nombre"${element.nombre6}
-        <p class= "text">${element.descripcion6}
-    </div>
-</div>
-
-`
-inicio.appendChild(principal)
-container.appendChild(card)
-}
-})
+    textOverlay.innerHTML = createContentHTML();
+});
